@@ -21,7 +21,7 @@ import { ToastComponent, ToastCommunicationService } from './toast';
 import { routing } from './app.routing';
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, routing,
+    imports: [BrowserModule, FormsModule, routing(),
         ToastyModule.forRoot(), DndModule.forRoot(), SlimLoadingBarModule.forRoot()],
     declarations: [AppComponent, HomeComponent, SlimComponent, DndComponent, ToastComponent],
     providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, ToastCommunicationService],

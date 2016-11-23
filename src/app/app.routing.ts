@@ -10,11 +10,19 @@ import { SlimComponent } from './slim/slim.component';
 import { DndComponent } from './dnd/dnd.component';
 import { ToastComponent } from './toast/toast.component';
 
-const appRoutes: Routes = [
-  {path: '',        component: HomeComponent},
-  {path: 'toasty',  component: ToastComponent},
-  {path: 'dnd',     component: DndComponent},
-  {path: 'slim',    component: SlimComponent}
-];
+// const appRoutes: Routes = [
+//   { path: '', component: HomeComponent },
+//   { path: 'toasty', component: ToastComponent },
+//   { path: 'dnd', component: DndComponent },
+//   { path: 'slim', component: SlimComponent }
+// ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+// export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+export function routing() {
+  return RouterModule.forRoot([
+    { path: '', component: HomeComponent },
+    { path: 'toasty', component: ToastComponent },
+    { path: 'dnd', component: DndComponent },
+    { path: 'slim', component: SlimComponent }
+  ]);
+}
